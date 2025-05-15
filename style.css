@@ -1,0 +1,390 @@
+/* === Couleurs principales === */
+:root {
+  --jaune-dhl: #ffcc00;
+  --rouge-dhl: #d40511;
+  --noir: #000000;
+  --blanc: #ffffff;
+  --gris-clair: #f5f5f5;
+  --gris-foncé: #333333;
+}
+
+/* === Réinitialisation === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* === Corps de la page === */
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--blanc);
+  color: var(--noir);
+  line-height: 1.6;
+}
+
+/* === Conteneur central === */
+.conteneur {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* === Bandeau supérieur === */
+.bandeau-haut {
+  background-color: var(--gris-clair);
+  padding: 10px 0;
+  font-size: 14px;
+  text-align: right;
+}
+
+.bandeau-haut a {
+  color: var(--rouge-dhl);
+  text-decoration: none;
+}
+
+.bandeau-haut a:hover {
+  text-decoration: underline;
+}
+
+/* === En-tête / Header === */
+.entete {
+  background-color: var(--jaune-dhl);
+  padding: 20px 0;
+}
+
+.flex-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.menu ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: var(--noir);
+  font-weight: bold;
+}
+
+.menu a:hover {
+  color: var(--rouge-dhl);
+}
+
+/* === Section Accueil / Héros === */
+.accueil {
+  background-color: var(--rouge-dhl);
+  color: var(--blanc);
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.accueil h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.accueil p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.form-suivi {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.form-suivi input {
+  padding: 10px;
+  width: 300px;
+  border: none;
+  border-radius: 4px;
+}
+
+.form-suivi button {
+  background-color: var(--jaune-dhl);
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.form-suivi button:hover {
+  background-color: #e6b800;
+}
+
+/* === Services === */
+.services {
+  background-color: var(--gris-clair);
+  padding: 60px 20px;
+}
+
+.services h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 28px;
+}
+
+.grille-services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.carte {
+  background-color: var(--blanc);
+  border-left: 5px solid var(--rouge-dhl);
+  padding: 20px;
+  transition: transform 0.3s;
+}
+
+.carte:hover {
+  transform: translateY(-5px);
+}
+
+.carte h3 {
+  margin-bottom: 10px;
+  color: var(--rouge-dhl);
+}
+
+/* === Avantages === */
+.avantages {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.avantages h2 {
+  margin-bottom: 20px;
+  font-size: 26px;
+}
+
+.avantages ul {
+  list-style: none;
+  padding: 0;
+}
+
+.avantages li {
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+/* === MyDHL+ Section === */
+.mydhl {
+  background-color: var(--jaune-dhl);
+  color: var(--noir);
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.mydhl h2 {
+  margin-bottom: 15px;
+}
+
+.mydhl p {
+  margin-bottom: 20px;
+}
+
+.btn-jaune {
+  background-color: var(--rouge-dhl);
+  color: var(--blanc);
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.btn-jaune:hover {
+  background-color: #a8030e;
+}
+
+/* === Section Contact rapide === */
+.contact-rapide {
+  background-color: var(--gris-clair);
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.boutons-contact {
+  margin-top: 20px;
+}
+
+.boutons-contact .btn {
+  background-color: var(--jaune-dhl);
+  color: var(--noir);
+  padding: 10px 20px;
+  text-decoration: none;
+  margin: 0 10px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.boutons-contact .btn:hover {
+  background-color: #e6b800;
+}
+
+/* === Pied de page === */
+.footer {
+  background-color: var(--gris-foncé);
+  color: var(--blanc);
+  padding: 40px 20px;
+}
+
+.colonnes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.colonnes div {
+  flex: 1;
+  min-width: 200px;
+  margin-bottom: 20px;
+}
+
+.footer h4 {
+  margin-bottom: 10px;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer a {
+  color: var(--blanc);
+  text-decoration: none;
+  display: block;
+  margin: 5px 0;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* === Bas du pied de page === */
+.bas-footer {
+  border-top: 1px solid #444;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.bas-footer p {
+  font-size: 14px;
+}
+
+.bas-footer select {
+  padding: 6px;
+  border-radius: 4px;
+  border: none;
+}
+
+/* === Responsive Design === */
+@media screen and (max-width: 768px) {
+  .flex-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .form-suivi {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-suivi input {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .colonnes {
+    flex-direction: column;
+  }
+
+  .bas-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+/* Section des résultats de suivi */
+.resultats-suivi {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+/* Animation fadeIn */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.colis-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.colis-image img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.colis-info {
+    flex: 1;
+}
+
+.colis-info h3 {
+    margin-bottom: 10px;
+    font-size: 1.4em;
+}
+
+.colis-info p {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.colis-info span {
+    font-weight: bold;
+}
+
+/* Section pour afficher un statut (livré, en transit, etc.) */
+#status-colis {
+    color: #f39c12; /* Par exemple, couleur orange pour 'En transit' */
+}
+
+/* Styles supplémentaires pour rendre l'interface agréable */
+#resultats-suivi {
+    transition: opacity 0.5s ease-in-out;
+}
